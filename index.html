@@ -334,7 +334,7 @@ function getHist(){try{return JSON.parse(localStorage.getItem(HK))||[]}catch(e){
 function addHist(h){const a=getHist();a.unshift(h);try{localStorage.setItem(HK,JSON.stringify(a.slice(0,30)))}catch(e){}}
 /* ---------- Papan skor (Google Sheets) ---------- */
 /* GANTI teks di bawah dengan URL Web App dari Google Apps Script (berakhiran /exec) */
-const SCRIPT_URL='TEMPEL_URL_WEB_APP_DI_SINI';
+const SCRIPT_URL='https://script.google.com/macros/s/AKfycbyGUyWncGk329EZQBenQcXc6dPT_02Gy9u4hAAf6MOiNdCyBCY-_XdqF6nmVe0zWC48FQ/exec';
 const READY=/^https:\/\/script\.google\.com\/macros\/s\/[^/]+\/exec$/.test(SCRIPT_URL.trim());
 let attempts=[],boardMode='best',boardState=READY?'loading':'local',myLast=null,pending=null;
 const fmtDur=x=>Math.floor(x/60)+':'+String(x%60).padStart(2,'0');
